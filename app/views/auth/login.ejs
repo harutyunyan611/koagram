@@ -1,0 +1,12 @@
+<h1>Welcome to login page</h1>
+<h1><%= %></h1>
+<form method="POST">
+    <label for="login">Username</label>
+    <input name="username" type="text" id="login" placeholder="Username">
+    <br>
+    <label for="pass">Passsword</label>
+    <input name="password" type="password" id="pass" placeholder="Passsword">
+    <br>
+    <input type="hidden" name="_csrf" value="<%= csrf%>">
+    <input type="submit" value="LOGIN">
+</form>
