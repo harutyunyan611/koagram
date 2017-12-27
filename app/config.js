@@ -1,7 +1,8 @@
 const path = require('path');
 module.exports = {
     port: 3000,
-    db: 'mongodb://localhost/test',
+    // db: 'mongodb://localhost/test',
+    db: 'mongodb://admin:admin@ds133557.mlab.com:33557/koagram',
     session: {
         key: 'koa:sess', /** (string) cookie key (default is koa:sess) */
         /** (number || 'session') maxAge in ms (default is 1 days) */
@@ -18,6 +19,6 @@ module.exports = {
         layout: 'template',
         viewExt: 'ejs',
         cache: false,
-        debug: true
+        debug: false
     }
 }

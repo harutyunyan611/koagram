@@ -6,6 +6,5 @@ const posts = require("../controllers/posts");
 //     ctx.body = "Hi from koa";
 //     // return next();
 // });
-router.get('/', posts.index);
-
+router.get('/posts', posts.index);
 module.exports = router;
