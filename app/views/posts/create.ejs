@@ -1,0 +1,18 @@
+<div style="margin-top: 2rem;">
+    <h1><%= csrf%></h1>
+    <form action="/posts/create?_csrf=<%= csrf %>" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="fileInput">File input</label>
+            <input name="image" type="file" class="form-control-file" id="fileInput" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+        </div>
+        <div class="form-group">
+            <label for="desc">Description</label>
+            <textarea name="description" class="form-control" id="desc" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+    <p>
+        <%=error%>
+    </p>
+</div>

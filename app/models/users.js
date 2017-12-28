@@ -1,11 +1,14 @@
 const mongoose = require("../db");
 const Schema = mongoose.Schema;
+const ObjectId = mongoose.Types.ObjectId;
 const bcrypt = require('bcrypt');
 const SALT_WORK_FACTOR = 10;
 
 const usersSchema = new Schema({
+    _id: { type: Schema.Types.ObjectId, default: function () { return new ObjectId() } },
     username: { type: String, required: true, index: { unique: true } },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    posts: [{ type: Schema.Types.ObjectId, ref: 'Posts' }]
 }, {
         timestamps: {
             createdAt: 'created_at'

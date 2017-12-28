@@ -23,11 +23,11 @@ module.exports = {
     },
     index: async function (ctx, next) {
         // ctx.body = JSON.stringify(post.findAll());
-        // let asd = new user({
-        //     username: "tsovak",
-        //     password: "tsovak",
-        // })
-        // asd.save();
+        let asd = new user({
+            username: "admin",
+            password: "admin",
+        })
+        asd.save();
         await ctx.render("homepage", { auth: await ctx.isAuthenticated() });
         // ctx.body = JSON.stringify();
     }
