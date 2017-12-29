@@ -30,4 +30,4 @@ app
     .use(apiRoutes.routes())
     .use(apiRoutes.allowedMethods())
     .use(static(__dirname + '/public'));
-    app.listen(config.port);
+app.listen(process.env.PORT || config.port);
