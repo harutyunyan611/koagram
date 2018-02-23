@@ -14,6 +14,8 @@ const usersSchema = new Schema({
             createdAt: 'created_at'
         }
     });
+
+
 usersSchema.pre('save', function (next) {
     var user = this;
 

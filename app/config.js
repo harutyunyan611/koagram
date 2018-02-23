@@ -14,6 +14,12 @@ module.exports = {
         signed: true, /** (boolean) signed or not (default true) */
         rolling: false, /** (boolean) Force a session identifier cookie to be set on every response. The expiration is reset to the original maxAge, resetting the expiration countdown. default is false **/
     },
+    redis: {
+        socketio: {
+            host: "127.0.0.1",
+            port: 6379
+        }
+    },
     view: {
         root: path.join(__dirname, 'views'),
         layout: 'template',

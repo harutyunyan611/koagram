@@ -1,0 +1,10 @@
+<h1>asd</h1>
+
+<script>
+	var socket = io('http://localhost:3000');
+	// socket.emit('register', "document.cookie");
+	socket.on('messagesSubscribe', function (data) {
+		console.log(data);
+	});
+	socket.emit('messagesSubscribe', getCookie("uid"));
+</script>

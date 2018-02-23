@@ -17,9 +17,14 @@ module.exports = {
                 // ctx.throw(401)
             } else {
                 await ctx.login(user);
+                ctx.cookies.set("uid", user.id, {httpOnly: false});
                 return ctx.redirect('/');
             }
         })(ctx)
+    },
+    destroy: async (ctx, next) => {
+        ctx.logout();
+        return ctx.redirect('/');
     },
     index: async function (ctx, next) {
         // ctx.body = JSON.stringify(post.findAll());
